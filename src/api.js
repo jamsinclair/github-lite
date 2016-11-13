@@ -1,4 +1,4 @@
-import 'whatwg-fetch'
+import fetch from 'fetch-lite'
 import btoa from 'btoa-lite'
 import { stringify } from 'query-string'
 

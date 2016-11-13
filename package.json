@@ -20,8 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "btoa-lite": "^1.0.0",
-    "query-string": "^4.2.3",
-    "whatwg-fetch": "^1.0.0"
+    "fetch-lite": "^1.0.1",
+    "query-string": "^4.2.3"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
