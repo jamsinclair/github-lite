@@ -1,4 +1,5 @@
 # GitHub Lite (Work In Progress, far from complete)
+[![npm version](https://badge.fury.io/js/github-lite.svg)](https://badge.fury.io/js/github-lite)
 
 ![Wind](https://media.giphy.com/media/OVcXGo8uj6DSg/giphy.gif)
 
