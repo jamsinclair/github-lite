@@ -6,7 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-require('whatwg-fetch');
+var _fetchLite = require('fetch-lite');
+
+var _fetchLite2 = _interopRequireDefault(_fetchLite);
 
 var _btoaLite = require('btoa-lite');
 
@@ -72,7 +74,7 @@ var BaseGitHubApi = function () {
         fetchConfig.body = body;
       }
 
-      return fetch(apiUrl, fetchConfig);
+      return (0, _fetchLite2.default)(apiUrl, fetchConfig);
     }
   }]);
 
