@@ -14,7 +14,8 @@
     "clean": "rimraf dist && mkdir dist",
     "bundle": "browserify ./src/index.js --standalone GitHubLite | derequire > ./dist/github-lite.bundle.js",
     "babel": "babel src --out-dir dist",
-    "build": "yarn run clean && yarn run bundle && yarn run babel"
+    "build": "yarn run clean && yarn run bundle && yarn run babel",
+    "test": "mocha --require babel-register test/*.spec.js"
   },
   "author": "jamsinclair <jamsinclairnz+npm@gmail.com>",
   "license": "MIT",
@@ -26,9 +27,13 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "derequire": "^2.0.3",
+    "mocha": "^3.1.2",
     "rimraf": "^2.5.4"
   },
   "browserify": {
