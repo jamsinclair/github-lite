@@ -15,7 +15,8 @@
     "compile:browser": "browserify ./src/index.js --standalone GitHubLite | derequire > ./dist/github-lite.bundle.js",
     "compile:node": "babel src --out-dir dist",
     "compile": "yarn run clean && yarn run compile:browser && yarn run compile:node",
-    "test": "mocha --require babel-register test/*.spec.js"
+    "test": "mocha --require babel-register test/*.spec.js",
+    "test:browser": "karma start karma.config.js"
   },
   "author": "jamsinclair <jamsinclairnz+npm@gmail.com>",
   "license": "MIT",
