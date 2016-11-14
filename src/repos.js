@@ -1,9 +1,12 @@
 import BaseGitHubApi from './api'
 
 class RepositoriesApi extends BaseGitHubApi {
-  list(user, params) {
-    const apiRoute = user ? `/users/${user}/repos` : '/user/repos'
-    return this.doRequest(apiRoute, { query: params })
+  list(params) {
+    return this.doRequest('/users/repos', { query: params })
+  }
+
+  listByUser(user, params) {
+    return this.doRequest(`/users/${user}/repos`, { query: params })
   }
 
   listByOrg(org, params) {
