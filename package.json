@@ -12,9 +12,9 @@
   ],
   "scripts": {
     "clean": "rimraf dist && mkdir dist",
-    "bundle": "browserify ./src/index.js --standalone GitHubLite | derequire > ./dist/github-lite.bundle.js",
-    "babel": "babel src --out-dir dist",
-    "build": "yarn run clean && yarn run bundle && yarn run babel",
+    "compile:browser": "browserify ./src/index.js --standalone GitHubLite | derequire > ./dist/github-lite.bundle.js",
+    "compile:node": "babel src --out-dir dist",
+    "compile": "yarn run clean && yarn run compile:browser && yarn run compile:node",
     "test": "mocha --require babel-register test/*.spec.js"
   },
   "author": "jamsinclair <jamsinclairnz+npm@gmail.com>",
