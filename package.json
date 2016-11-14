@@ -17,7 +17,8 @@
     "compile": "yarn run clean && yarn run compile:browser && yarn run compile:node",
     "test": "npm run test:node && npm run test:browser",
     "test:node": "mocha --require babel-register test/*.spec.js",
-    "test:browser": "karma start karma.config.js"
+    "test:browser": "karma start karma.config.js",
+    "prepublish": "yarn run compile"
   },
   "author": "jamsinclair <jamsinclairnz+npm@gmail.com>",
   "license": "MIT",
