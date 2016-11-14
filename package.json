@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "btoa-lite": "^1.0.0",
-    "fetch-lite": "^1.0.1",
+    "isomorphic-fetch": "^2.2.1",
     "query-string": "^4.2.3"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import fetch from 'fetch-lite'
+import 'isomorphic-fetch'
 import btoa from 'btoa-lite'
 import { stringify } from 'query-string'
 
