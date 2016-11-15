@@ -1,6 +1,6 @@
 import 'isomorphic-fetch'
 import btoa from 'btoa-lite'
-import { stringify } from 'query-string'
+import qs from 'querystringify'
 
 const DEFAULT_API_URL = 'https://api.github.com'
 const METHODS_WITH_NO_BODY = ['GET', 'HEAD', 'DELETE']
@@ -25,7 +25,7 @@ class BaseGitHubApi {
     let apiUrl = `${url}`
 
     if (apiUrl.indexOf('?') === -1 && query) {
-      apiUrl = `${apiUrl}?${stringify(query)}`
+      apiUrl = `${apiUrl}?${qs.stringify(query)}`
     }
 
     if (apiUrl.indexOf('//') === -1) {
