@@ -55,5 +55,5 @@ import Repositories from 'github-lite/dist/repos'
 
 const client = new Client({ token: 'my-github-token' }, { PullRequests, Repositories })
 client.PullRequests.list('owner', 'privateRepo').then(/* Do Something */)
-client.Repositories.list('owner').then(/* Do Something */)
+client.Repositories.listByUser('owner').then(/* Do Something */)
 ```
